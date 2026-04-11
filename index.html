@@ -1534,7 +1534,7 @@ ${txt}
 [hr]
 ※ 仕組み化研修ポータルサイトより自動送信[/info]`;
 
-  fetch('https://api.chatwork.com/v2/rooms/64090725/messages', {
+  fetch('https://corsproxy.io/?url=https://api.chatwork.com/v2/rooms/64090725/messages', {
     method: 'POST',
     headers: {
       'X-ChatWorkToken': '3853da61badb8cd3d49ea64b15d99f9b',
@@ -1648,7 +1648,7 @@ function sendToChatwork(btn){
 
   if(btn){ btn.textContent = '送信中...'; btn.disabled = true; }
 
-  fetch('https://api.chatwork.com/v2/rooms/64090725/messages', {
+  fetch('https://corsproxy.io/?url=https://api.chatwork.com/v2/rooms/64090725/messages', {
     method: 'POST',
     headers: {
       'X-ChatWorkToken': '3853da61badb8cd3d49ea64b15d99f9b',
