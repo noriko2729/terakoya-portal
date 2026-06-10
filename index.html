@@ -784,7 +784,7 @@
           <div class="stat-card">
             <div class="label">次回まで</div>
             <div class="value" id="days-left">--</div>
-            <div class="sub">第2回 5月11日（月）</div>
+            <div class="sub">第2回 6月12日（金）</div>
           </div>
           <div class="stat-card">
             <div class="label">配布資料</div>
@@ -838,7 +838,7 @@
             <div class="session-item">
               <div class="session-num upcoming" id="dash-session-num-2">02</div>
               <div class="session-info">
-                <div class="date">5月11日（月）15:00〜17:00　EO京都事務所</div>
+                <div class="date">6月12日（金）15:00〜17:00　EO京都事務所</div>
                 <div class="title">【組織編】100人の壁を突破する社内の仕組み化</div>
                 <span class="session-tag tag-upcoming" id="dash-session-tag-2">予定</span>
               </div>
@@ -846,7 +846,7 @@
             <div class="session-item">
               <div class="session-num upcoming" id="dash-session-num-3">03</div>
               <div class="session-info">
-                <div class="date">6月12日（金）15:00〜　大阪Animo事務所</div>
+                <div class="date">6月13日（土）15:00〜17:00　大阪Animo事務所</div>
                 <div class="title">【実践編】成長を止めない経営判断とファイナンス</div>
                 <span class="session-tag tag-upcoming" id="dash-session-tag-3">予定</span>
               </div>
@@ -933,7 +933,7 @@
               <div class="sdcard-title">【組織編】カオスを乗りこなす「100人の壁」突破マネジメント</div>
               <div class="sdcard-date">
                 <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="var(--orange)" stroke-width="1.5"><rect x="3" y="4" width="14" height="14" rx="2"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>
-                2025年5月11日（月）　15:00〜17:00　塾 ／ 17:00〜　懇親会
+                2025年6月12日（金）　15:00〜17:00　塾 ／ 17:00〜　懇親会
               </div>
               <div class="sdcard-date" style="margin-top:-8px">
                 <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="var(--orange)" stroke-width="1.5"><path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
@@ -954,7 +954,7 @@
               <div class="sdcard-title">【実践編】起業家の「覚悟」とファイナンス・突破口の作り方</div>
               <div class="sdcard-date">
                 <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="14" height="14" rx="2"/><path d="M3 8h14M7 2v4M13 2v4"/></svg>
-                2025年6月12日（金）　15:00〜17:00　塾 ／ 17:00〜　懇親会
+                2025年6月13日（土）　15:00〜17:00　塾 ／ 17:00〜　懇親会
               </div>
               <div class="sdcard-date" style="margin-top:-8px">
                 <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2C6.7 2 4 4.7 4 8c0 5 6 10 6 10s6-5 6-10c0-3.3-2.7-6-6-6zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
@@ -1365,8 +1365,9 @@ const DOCS = [
   {id:1,session:'common',name:'3日間の概要と本日のレジュメ',type:'pdf',date:'2025.04.11',size:'0.5 MB'},
   {id:3,session:'s1',name:'Animo社長研修の開示資料',type:'pptx',date:'2025.04.11',size:'4.1 MB'},
   {id:4,session:'s1',name:'1-1. 課題の言語化資料',type:'docx',date:'2025.04.11',size:'0.8 MB'},
-  {id:6,session:'s2',name:'第2回 配布資料（5月11日公開予定）',type:'pptx',date:'2025.05.11',size:'準備中'},
-  {id:7,session:'s3',name:'第3回 配布資料（6月12日公開予定）',type:'pptx',date:'2025.06.12',size:'準備中'},
+  {id:8,session:'s2',name:'第2回 パーパスとコアバリューを設計する',type:'pptx',date:'2025.05.11',size:'リンク',url:'https://docs.google.com/presentation/d/1EpJQI97HpEFbjwI0ABSJZZ6O0DpHEiVdPGkWqzyIe_0/edit?usp=sharing'},
+  {id:9,session:'s2',name:'LIVING LEGACY 事前ワーク（人生の輪）',type:'pdf',date:'2025.05.11',size:'リンク',url:'https://drive.google.com/file/d/16MwDHEaUGGAyH-yR_MVDqbT4Np20LVQ5/view?usp=sharing'},
+  {id:7,session:'s3',name:'第3回 配布資料（6月13日公開予定）',type:'pptx',date:'2025.06.13',size:'準備中'},
 ];
 
 const SESSION_LABELS = {s1:'第1回',s2:'第2回',s3:'第3回',common:'共通'};
@@ -1407,6 +1408,7 @@ const PDF_DATA = "data:application/pdf;base64,JVBERi0xLjQKJSDi48/TCjMKMApvYmoKPD
 
 function dlDoc(id){
   const d = DOCS.find(x=>x.id===id);
+  if(d && d.url){ window.open(d.url, '_blank', 'noopener'); return; }
   const downloads = {
     1: { data: PDF_DATA_00, name: '3日間の概要と本日のレジュメ.pdf' },
     3: { data: PDF_DATA,    name: 'Animo社長研修_ビジネスモデルについて.pdf' },
@@ -1424,9 +1426,9 @@ function dlDoc(id){
 
 // HOMEWORK
 const HW = [
-  {session:'s1',title:'10倍ゴールを文章化して共有する',desc:'ワーク①で設定したゴールをA4一枚にまとめ、右腕候補のキーパーソンに共有する。',due:'5月11日（第2回）まで',done:false},
-  {session:'s1',title:'属人性タスクのマニュアル化に着手する',desc:'ワーク②の「×」項目を1つ選び、実際にマニュアルの初稿を作成する。',due:'5月11日（第2回）まで',done:false},
-  {session:'s1',title:'ニッチ市場・ドミナント戦略を策定する',desc:'「このエリア・この業種で1番になれる」市場を1つ選び、理由をA4半ページで言語化する。',due:'5月11日（第2回）まで',done:false},
+  {session:'s1',title:'10倍ゴールを文章化して共有する',desc:'ワーク①で設定したゴールをA4一枚にまとめ、右腕候補のキーパーソンに共有する。',due:'6月12日（第2回）まで',done:false},
+  {session:'s1',title:'属人性タスクのマニュアル化に着手する',desc:'ワーク②の「×」項目を1つ選び、実際にマニュアルの初稿を作成する。',due:'6月12日（第2回）まで',done:false},
+  {session:'s1',title:'ニッチ市場・ドミナント戦略を策定する',desc:'「このエリア・この業種で1番になれる」市場を1つ選び、理由をA4半ページで言語化する。',due:'6月12日（第2回）まで',done:false},
   {session:'common',title:'SBCフレームワークを自社に適用する',desc:'自社事業のSocial/Business/Creativeを書き出し、最も弱い軸とその改善策を特定する。',due:'随時',done:false},
 ];
 
@@ -1932,7 +1934,7 @@ function resetSheet(){
 const ANNOUNCE_KEY = 'portal_announces';
 const DEFAULT_ANNOUNCES = [
   {date:'2025.04.11', author:'橋本典子', title:'第1回「戦略編」資料を公開しました', body:'本日の講義資料・ワークシートを資料ライブラリに追加しました。宿題も確認してください。', read:false},
-  {date:'2025.04.10', author:'事務局',   title:'第2回（5/11）の会場をご確認ください', body:'第2回の会場情報をスケジュールページに掲載しました。', read:false},
+  {date:'2025.04.10', author:'事務局',   title:'第2回（6/12）の会場をご確認ください', body:'第2回の会場情報をスケジュールページに掲載しました。', read:false},
   {date:'2025.04.05', author:'事務局',   title:'ポータルサイトをオープンしました', body:'メンバーの皆様、ようこそ。このポータルで全資料・スケジュールを管理します。', read:true},
 ];
 
