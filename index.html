@@ -775,7 +775,7 @@
             </svg>
             <div class="progress-label">
               <span class="num">本日</span>
-              <span class="txt">第1回 開催中</span>
+              <span class="txt">第2回 開催中</span>
             </div>
           </div>
         </div>
@@ -2089,7 +2089,7 @@ function renderSessionStatus(){
     const ctrl = document.createElement('div');
     ctrl.id = `session-ctrl-${n}`;
     ctrl.style.cssText = 'margin-top:14px;padding-top:12px;border-top:1px dashed var(--border)';
-    const cur = st[n] || (n===1?'active':'upcoming');
+    const cur = st[n] || (n===1?'done':n===2?'active':'upcoming');
     ctrl.innerHTML = `
       <div style="font-size:11px;font-weight:600;color:var(--orange);margin-bottom:8px">🔑 ステータス変更</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -2112,7 +2112,7 @@ function setSessionStatus(n, val){
 
 function applySessionStatuses(){
   const st = loadSessionStatus();
-  const defaults = {1:'active', 2:'upcoming', 3:'upcoming'};
+  const defaults = {1:'done', 2:'active', 3:'upcoming'};
   [1,2,3].forEach(n => {
     const cur = st[n] || defaults[n];
     const opt = SESSION_STATUS_OPTIONS.find(o=>o.val===cur);
